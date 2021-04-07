@@ -40,25 +40,25 @@ blah, blah, blah, blah
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var migraine_count = 0;
+        var headache_count = 0;
          
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-	    alert(allergy_count);	
+        function migraineAdd(){
+            migraine_count = migraine_count + 1;
+	    alert(migraine_count);	
 
         };
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
+        function headacheAdd(){
+            headache_count = headache_count + 1;
         };
          
 	function displayResults(){  
-		var coldPercent = cold_count/4 * 100;
-		var allergyPercent = allergy_count/4 * 100;
+		var headachePercent = headache_count/4 * 100;
+		var migrainePercent = migraine_count/4 * 100;
 		var resultText = document.getElementById("results");
-resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is cold = " + coldPercent + "%"; 
+resultText.innerHTML = "Probability it is allergies = " + migrainePercent + "%" + "<br> Probability it is headache = " + headachePercent + "%"; 
 	};
   </script>
 
@@ -88,11 +88,11 @@ resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" +
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>headache or Allergies?</h1>
 </div>
 <!--Question 1-->	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have a headache but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -106,9 +106,9 @@ resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" +
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>
-		<a href="#two" onclick="allergyAdd();"class="w3-btn w3-black"> Yes</a>
-		<a href="#two" onclick="coldAdd();"class="w3-btn w3-black"> No</a>	
+        <p>Does the pain last from aywhere from 4 to 72 hours?</p>
+		<a href="#two" onclick="migraineAdd();"class="w3-btn w3-black"> Yes</a>
+		<a href="#two" onclick="headacheAdd();"class="w3-btn w3-black"> No</a>	
     	</div><!--content-->
 </div>
 <!--Question 2-->
@@ -118,9 +118,9 @@ resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" +
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p>
-		<a href="#three" onclick="allergyAdd();"class="w3-btn w3-black"> Yes</a>
-		<a href="#three" onclick="coldAdd();"class="w3-btn w3-black"> No</a>
+	<p>Is the pain on one side of your head?</p>
+		<a href="#three" onclick="migraineAdd();"class="w3-btn w3-black"> Yes</a>
+		<a href="#three" onclick="headacheAdd();"class="w3-btn w3-black"> No</a>
  	</div><!--content--> 
 	<!--Question 3-->
 </div>	
@@ -130,9 +130,9 @@ resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" +
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>
-		<a href="#four" onclick="allergyAdd();"class="w3-btn w3-black"> Yes</a>
-		<a href="#four" onclick="coldAdd();"class="w3-btn w3-black"> No</a>
+	<p>Is the pain throbbing or pulsating?</p>
+		<a href="#four" onclick="migraineAdd();"class="w3-btn w3-black"> Yes</a>
+		<a href="#four" onclick="headacheAdd();"class="w3-btn w3-black"> No</a>
  	</div><!--content--> 
 	<!--Question 4-->
 </div> 
@@ -142,23 +142,47 @@ resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" +
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" onclick="allergyAdd();"class="w3-btn w3-black"> Yes</a>
-		<a href="#five" onclick="coldAdd();"class="w3-btn w3-black"> No</a>
+	<p>Do you experience this pain more than three times a month?</p>
+		<a href="#five" onclick="migraineAdd();"class="w3-btn w3-black"> Yes</a>
+		<a href="#five" onclick="headacheAdd();"class="w3-btn w3-black"> No</a>
+ 	</div><!--content--> 
+	<!--Question 5-->
+</div> 
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>If you can recall, did you have any vision loss or phenomena hours or days before experiencing this pain?</p>
+		<a href="#six" onclick="migraineAdd();"class="w3-btn w3-black"> Yes</a>
+		<a href="#six" onclick="headacheAdd();"class="w3-btn w3-black"> No</a>
+ 	</div><!--content--> 
+	<!--Question 6-->
+</div> 
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>If you can recall, did you have any difficulty speaking hours or days before experiencing this pain?</p>
+		<a href="#seven" onclick="migraineAdd();"class="w3-btn w3-black"> Yes</a>
+		<a href="#seven" onclick="headacheAdd();"class="w3-btn w3-black"> No</a>
  	</div><!--content--> 
 	<!--Get Results Page-->
 </div> 
-<div class="page" id="five">
+<div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Get Results!</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<a href="#six" onclick="displayResults();"class="w3-btn w3-black"> Results Now!</a> 
+		<a href="#eight" onclick="displayResults();"class="w3-btn w3-black"> Results Now!</a> 
 	</div>
 <!--Results page-->	
 </div>
-</div class="page" id="six">
+</div class="page" id="eight">
 	<div class="w3-container w3-flat-carrot">
 	<h1>Results!</h1>
 	</div>
