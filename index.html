@@ -40,7 +40,11 @@ blah, blah, blah, blah
         var migraine_count = 0;
         var headache_count = 0;
          
-
+img, object{
+	       max-height:80%;
+	   max-width:80%;
+           }
+	
         function migraineAdd(){
             migraine_count = migraine_count + 1;
 	    alert(migraine_count);	
@@ -86,9 +90,9 @@ resultText.innerHTML = "Probability it is migraine = " + migrainePercent + "%" +
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>headache or migraine?</h1>
+</div>
 	
 	<img src="https://images.medicinenet.com/images/article/main_image/migraine-headache2.jpg" alt="girl with migraine">
-</div>
 <!--Question 1-->	
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a headache but wonder if it is a migraine. Answer a few short questions to find out!</p>
